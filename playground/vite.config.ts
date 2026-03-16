@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
-import { develop } from "./../src/networkConfigs";
+import { resolveNetwork } from "../src/scripts";
 
-export default defineConfig({
-  plugins: develop.plugins,
-});
+export default defineConfig(({ mode }) => ({
+  plugins: resolveNetwork(mode).plugins,
+}));

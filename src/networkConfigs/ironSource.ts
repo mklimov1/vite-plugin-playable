@@ -1,4 +1,4 @@
-import { createNetworkConfig } from "./../scripts/createNetworkConfig";
+import { createNetworkConfig } from "./../scripts";
 
 const NAME = "ironSource";
 
