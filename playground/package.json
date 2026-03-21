@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "build:dev": "vite build --mode develop",
-    "build:iron": "vite build --mode ironSource"
+    "build:iron": "vite build --mode ironsource"
   },
   "devDependencies": {
     "typescript": "~5.9.3",

@@ -1,6 +1,5 @@
-import * as networkConfigs from "../networkConfigs";
+import { networkConfigMap, type NetworkName } from "../networkConfigs";
 
-export const resolveNetwork = (name = "develop") => {
-  const config = networkConfigs[name as keyof typeof networkConfigs];
-  return config ?? networkConfigs.develop;
+export const resolveNetwork = (name: NetworkName = "develop") => {
+  return networkConfigMap[name] ?? networkConfigMap.develop;
 };

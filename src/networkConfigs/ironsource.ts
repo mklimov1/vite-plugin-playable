@@ -1,8 +1,8 @@
-import { createNetworkConfig } from "./../scripts";
+import { createNetworkConfig } from "../scripts";
 
-const NAME = "ironSource";
+const NAME = "ironsource";
 
-export const ironSource = createNetworkConfig({
+export const ironsource = createNetworkConfig({
   name: NAME,
   ctaFunction: `
     function cta() {
