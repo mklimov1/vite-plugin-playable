@@ -53,8 +53,10 @@ export const assetpackPlugin = (options: AssetpackOptions = {}): Plugin => {
     configResolved(resolvedConfig) {
       mode = resolvedConfig.command;
       if (!resolvedConfig.publicDir || apConfig.output !== output) return;
-      const publicDir = resolvedConfig.publicDir.replace(process.cwd(), "");
-      apConfig.output = `.${publicDir}/assets/`;
+      const publicDir = path
+        .relative(process.cwd(), resolvedConfig.publicDir)
+        .replace(/\\/g, "/");
+      apConfig.output = `./${publicDir}/assets/`;
     },
     buildStart: async () => {
       await fs.mkdir(resolvedGeneratedDir, { recursive: true });
