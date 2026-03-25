@@ -1,7 +1,7 @@
 import type { UserConfig } from "vite";
 import { createConfig, type ConfigOptions } from "./createConfig";
 import { resolveNetwork } from "../scripts/resolveNetwork";
-import type { NetworkName } from "@/networkConfigs";
+import type { NetworkName } from "../networkConfigs";
 
 export interface PlayableConfigOptions extends ConfigOptions {
   network?: NetworkName;
@@ -15,6 +15,7 @@ export const playableConfig = (
 
   return createConfig({
     ...rest,
+    outDir: `dist/${network}`,
     plugins: [...plugins, ...resolved.plugins],
   });
 };

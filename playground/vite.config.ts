@@ -1,6 +1,7 @@
-import { defineConfig } from "vite";
-import { resolveNetwork } from "../src/scripts";
+import { playableConfig } from "../src";
+import { NetworkName } from "../src/networkConfigs";
 
-export default defineConfig(({ mode }) => ({
-  plugins: resolveNetwork(mode).plugins,
-}));
+export default ({ mode }: { mode: string }) =>
+  playableConfig({
+    network: mode as NetworkName,
+  });
