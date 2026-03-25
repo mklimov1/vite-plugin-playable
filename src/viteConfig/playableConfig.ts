@@ -15,7 +15,6 @@ export const playableConfig = (
 
   return createConfig({
     ...rest,
-    outDir: `dist/${network}`,
     plugins: [...plugins, ...resolved.plugins],
   });
 };
