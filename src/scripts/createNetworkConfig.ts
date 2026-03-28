@@ -31,7 +31,8 @@ export const createNetworkConfig = (config: Options): NetworkConfig => {
   if (config.zip !== false) {
     plugins.push(
       zipPack({
-        outDir: "zips",
+        inDir: `dist/${config.name}`,
+        outDir: `dist/zips`,
         outFileName: `${config.name}.zip`,
       }) as Plugin,
     );

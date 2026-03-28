@@ -27,6 +27,7 @@ export const createConfig = (options: ConfigOptions) => {
       target: "esnext",
       outDir: outDir,
       assetsDir: "assets",
+      emptyOutDir: false,
     },
     plugins,
   };

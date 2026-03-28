@@ -2,6 +2,9 @@
   "name": "vite-plugin-playable",
   "version": "0.0.0",
   "type": "module",
+  "bin": {
+    "infra-init": "./dist/cli/init.js"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -10,14 +13,16 @@
     "./assetpack": {
       "import": "./dist/assetpack.js",
       "types": "./dist/assetpack.d.ts"
-    }
+    },
+    "./tsconfig.base.json": "./infra/shared/tsconfig.base.json"
   },
   "files": [
     "dist",
-    "globals.d.ts"
+    "globals.d.ts",
+    "infra"
   ],
   "scripts": {
-    "build": "tsup src/index.ts src/assetpack.ts --format esm --dts --external @assetpack/core --external vite-plugin-singlefile",
+    "build": "tsup src/index.ts src/assetpack.ts src/cli/init.ts --format esm --dts --external @assetpack/core --external vite-plugin-singlefile --external vite-plugin-zip-pack",
     "link": "npm run build && npm link"
   },
   "devDependencies": {
