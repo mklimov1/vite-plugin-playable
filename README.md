@@ -39,7 +39,7 @@ export default ({ mode }) =>
 
 ```bash
 vite build --mode develop
-vite build --mode ironsource
+vite build --mode develop-inline
 ```
 
 ## Infra CLI
