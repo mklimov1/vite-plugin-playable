@@ -1,4 +1,4 @@
-# vite-game-forge
+# @mklimov1/vite-game-forge
 
 ## Install
 
@@ -10,7 +10,7 @@ npm ci
 
 ```ts
 // vite.config.ts
-import { playableConfig } from "vite-game-forge";
+import { playableConfig } from "@mklimov1/vite-game-forge";
 
 export default ({ mode }) => playableConfig({ network: mode });
 ```
@@ -22,11 +22,11 @@ npm i -D @assetpack/core
 ```
 
 ```ts
-import { playableConfig } from "vite-game-forge";
+import { playableConfig } from "@mklimov1/vite-game-forge";
 import {
   assetpackPlugin,
   playablePipesConfig,
-} from "vite-game-forge/assetpack";
+} from "@mklimov1/vite-game-forge/assetpack";
 
 export default ({ mode }) =>
   playableConfig({
