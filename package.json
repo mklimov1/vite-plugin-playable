@@ -1,6 +1,6 @@
 {
   "name": "@mklimov1/vite-game-forge",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "bin": {
     "infra-init": "./dist/cli/init.js"
